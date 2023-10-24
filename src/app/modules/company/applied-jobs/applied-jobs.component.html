@@ -1,0 +1,258 @@
+<!-- <div class="tabView-body">
+    <p-tabView class="custom-tabview" [(activeIndex)]="activeIndex">
+        <p-tabPanel class="tab-view-back" headerStyleClass="mx-7">
+            <ng-template pTemplate="header">
+                <p-button label="All Candidates" (click)="handleTabChange(0)"
+                    styleClass="{{activeIndex!=0 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of candidates" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-9 d-flex p-0 align-items-center">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img src="../../assets/pictures/demo.jpg" alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 fw-semibold">{{item.candidateId.fName}} {{item.candidateId.lName}}</p>
+                            </div>
+                        </div>
+                     
+                        <div class="col-3">
+                            <p-button class="btn-view" (click)="handleClickView(item.candidateId._id, item.jobId)">View</p-button>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel headerStyleClass="mx-7">
+            <ng-template pTemplate="header">
+                <p-button label="Short listed" (click)="handleTabChange(1)"
+                    styleClass="{{activeIndex!=1 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of candidates" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-5 d-flex p-0 align-items-center">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img src="../../assets/pictures/demo.jpg" alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 fw-semibold">{{item.candidateId.fName}} {{item.candidateId.lName}}</p>
+                            </div>
+                        </div>
+                        <div class="col-4 align fs-2">
+                            <i class="fs-3 pr-2 fw-bold pi pi-info-circle"></i>
+                            <u class="fs-4">View Detail</u>
+                        </div>
+                        <div class="col-3">
+                            <p class="m-0">Pending Decision</p>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel headerStyleClass="mx-7">
+            <ng-template pTemplate="header">
+                <p-button label="Final short listed" (click)="handleTabChange(2)"
+                    styleClass="{{activeIndex!=2 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of candidates" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-9 d-flex p-0 align-items-center">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img src="../../assets/pictures/demo.jpg" alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 fw-semibold">{{item.candidateId.fName}} {{item.candidateId.lName}}</p>
+                            </div>
+                        </div>
+                      
+                        <div class="col-3">
+                            <u class="text-red-500">Reason Message</u>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel headerStyleClass="mx-7">
+            <ng-template pTemplate="header">
+                <p-button label="Interview Candidates" (click)="handleTabChange(2)"
+                    styleClass="{{activeIndex!=2 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of candidates" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-9 d-flex p-0 align-items-center">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img src="../../assets/pictures/demo.jpg" alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 fw-semibold">{{item.candidateId.fName}} {{item.candidateId.lName}}</p>
+                       
+                            </div>
+                        </div>
+                   
+                        <div class="col-3">
+                            <u class="text-red-500">Reason Message</u>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        
+    </p-tabView>
+</div> -->
+<div class="tabView-body">
+    <p-tabView class="custom-tabview" [(activeIndex)]="activeIndex">
+        <p-tabPanel class="tab-view-back">
+            <ng-template pTemplate="header">
+                <p-button label="All Candidates" (click)="handleTabChange(0)"
+                    styleClass="{{activeIndex!=0 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of candidates" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-9 d-flex p-0 align-items-center">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img [src]="!item?.candidateId?.profilePic[0]?'../../assets/pictures/demo.jpg':'https://careerapis.tech-east.com.pk/api/getFile'+item?.candidateId?.profilePic[0]"
+                                        alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 m-0 fw-semibold">{{item?.candidateId?.fName}}
+                                    {{item?.candidateId?.lName}}
+                                </p>
+                                <p class="fs-5 m-0">{{item?.jobId?.title}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <p-button class="btn-view"
+                                (click)="handleClickView(item.candidateId._id, item.jobId)">View</p-button>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel>
+            <ng-template pTemplate="header">
+                <p-button label="Short listed" (click)="handleTabChange(1)"
+                    styleClass="{{activeIndex!=1 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of candidates" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-5 d-flex p-0 align-items-center">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img [src]="!item?.candidateId?.profilePic[0]?'../../assets/pictures/demo.jpg':'https://careerapis.tech-east.com.pk/api/getFile'+item?.candidateId?.profilePic[0]"
+                                        alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 m-0 fw-semibold">{{item?.candidateId?.fName}}
+                                    {{item?.candidateId?.lName}}
+                                </p>
+                                <p class="fs-5 m-0">{{item?.jobId?.title}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-4 align fs-2">
+                            <i class="fs-3 pr-2 fw-bold pi pi-info-circle"></i>
+                            <u class="fs-4">View Detail</u>
+                        </div>
+                        <div class="col-3">
+                            <p class="m-0">Pending Decision</p>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel>
+            <ng-template pTemplate="header">
+                <p-button label="Final short listed" (click)="handleTabChange(2)"
+                    styleClass="{{activeIndex!=2 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of candidates" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-9 d-flex p-0 align-items-center">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img [src]="!item?.candidateId?.profilePic[0]?'../../assets/pictures/demo.jpg':'https://careerapis.tech-east.com.pk/api/getFile'+item?.candidateId?.profilePic[0]"
+                                        alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 m-0 fw-semibold">{{item?.candidateId?.fName}}
+                                    {{item?.candidateId?.lName}}
+                                </p>
+                                <p class="fs-5 m-0">{{item?.jobId?.title}}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <u class="text-red-500">Reason Message</u>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel>
+            <ng-template pTemplate="header">
+                <p-button label="Interview Candidates" (click)="handleTabChange(3)"
+                    styleClass="{{activeIndex!=3 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of candidates" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-9 d-flex p-0 align-items-center">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img [src]="!item?.candidateId?.profilePic[0]?'../../assets/pictures/demo.jpg':'https://careerapis.tech-east.com.pk/api/getFile'+item?.candidateId?.profilePic[0]"
+                                        alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 m-0 fw-semibold">{{item?.candidateId?.fName}}
+                                    {{item?.candidateId?.lName}}
+                                </p>
+                                <p class="fs-5 m-0">{{item?.jobId?.title}}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <u class="text-red-500">Reason Message</u>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <div *ngIf="!candidates || candidates.length==0">
+            <h1>No Candidates Regarding this filter</h1>
+        </div>
+    </p-tabView>
+</div>
+
+<p-dialog header="Header" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+    [resizable]="false">
+    <p class="m-0">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </p>
+</p-dialog>

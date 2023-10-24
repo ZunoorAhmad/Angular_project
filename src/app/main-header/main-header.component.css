@@ -1,0 +1,46 @@
+
+
+.btn-sideMenu ::ng-deep .p-button {
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.btn-sideMenu ::ng-deep .p-button:hover {
+    background: #3F41E3;
+    color: white;
+    border: 1px solid #3F41E3;
+    width: 100%;
+}
+
+.card_div {
+    min-height: 78vh;
+}
+
+.btn-logout {
+    bottom: 30px;
+}
+
+.btn-apply ::ng-deep .p-button {
+    background: #FD7265;
+    border: 1px solid #FD7265;
+    width: 230px;
+    font-size: 20px;
+    border-radius: 35px;
+    justify-content: center;
+}
+
+.p-file-upload ::ng-deep .p-fileupload .p-fileupload-buttonbar {
+    background: transparent;
+    padding: 0;
+}
+
+/* use of @media query */
+@media(min-width:1300px) and (max-width:1450px) {
+    .btn-sideMenu ::ng-deep .p-button {
+        font-size: 15px;
+    }
+}

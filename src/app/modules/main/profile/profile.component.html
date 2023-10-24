@@ -1,0 +1,65 @@
+<div class="grid m-0 p-3">
+    <div class="col-lg-8 col-md-12 col-sm-12 order-lg-first">
+        <form [formGroup]="completeProfileForm" (ngSubmit)="onSubmit()">
+            <div class="grid m-0">
+                <div class="col-12">
+                    <div>
+                        <p class="fs-3 fw-semibold my-3">First Name</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-11" pInputText
+                            placeholder="JAVA Developer" formControlName="fName" />
+                    </div>
+                    <div>
+                        <p class="fs-3 fw-semibold my-3">Last Name</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-11" pInputText
+                            placeholder="JAVA Developer" formControlName="lName" />
+                    </div>
+                    <div>
+                        <p class="fs-3 fw-semibold my-3">Email</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-11" pInputText
+                            placeholder="JAVA Developer" formControlName="email" />
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div>
+                        <p class="fs-3 fw-semibold my-3">Password</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-11" pInputText
+                            placeholder="JAVA Developer" formControlName="password" />
+                    </div>
+                    <div>
+                        <p class="fs-3 fw-semibold my-3">LinkedIn Profile</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-11" pInputText
+                            placeholder="JAVA Developer" formControlName="linkedInProfile" />
+                    </div>
+                    <div class="mt-2 text-center">
+                        <p-button class="btn-post" type="submit">Post</p-button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-4 col-md-12 col-sm-12 order-first text-center">
+        <img class="border-round-3xl h-24rem mt-2 p-2 profile-img"
+            [(ngModel)]="'https://careerapis.tech-east.com.pk/api/getFile'+profileImage"
+            [src]="!profileImage?'../../assets/pictures/person.png':isBase64Image(profileImage)?profileImage:'https://careerapis.tech-east.com.pk/api/getFile'+profileImage"
+            alt="">
+        <input type="file" #myFileInput accept="image/*" class="drop-zone__input ion-hide" (change)="uploadFile($event)"
+            multiple />
+    </div>
+    <div class="mt-4 shadow-4 p-file-upload col-lg-8 col-md-12 col-sm-12 col-11 ">
+        <p-card class="width-12">
+            <!-- <ng-template pTemplate="content">
+                <ul *ngIf="pdf?.length">
+                    <li *ngFor="let file of pdf">{{ file.name || file }} - {{ file?.size }} bytes</li>
+                </ul>
+            </ng-template> -->
+            <!-- <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]" [(ngModel)]="pdf"
+             url="https://www.primefaces.org/cdn/api/upload.php" accept=".pdf"
+             (onUpload)="onUpload($event)"></p-fileUpload> -->
+            <h3>Upload CV</h3>
+            <div>
+                <input type="file" #myFileInput accept=".pdf" class="drop-zone__input ion-hide"
+                    (change)="onUpload($event)" multiple />
+            </div>
+        </p-card>
+    </div>
+</div>

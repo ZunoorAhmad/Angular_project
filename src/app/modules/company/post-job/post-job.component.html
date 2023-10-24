@@ -1,0 +1,61 @@
+<div class="fluid-container">
+    <div class="row">
+        <div class="p-5 col-xl-8">
+            <form [formGroup]="jobForm" (ngSubmit)="onSubmit()" class="responsive-form">
+                <div class="m-0">
+                    <div class="col-md-12">
+                        <p class="fs-2 fw-semibold">Job Title</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-100" pInputText
+                            placeholder="JAVA Developer" formControlName="title" />
+                    </div>
+                    <div class=" col-12 col-lg-5 col-md-12 col-sm-12 col-xl-6">
+                        <p class="fs-2 fw-semibold">Employment Type</p>
+                        <p-dropdown class="fs-4 p-0 p-dropdown-content" placeholder="Part time" [options]="jobType"
+                            optionLabel="name" (onChange)="handleEmploymentTypeChange($event)">
+                        </p-dropdown>
+                    </div>
+                </div>
+
+                <div class="grid m-0">
+                    <div class=" col-12 col-lg-5 pr-3 col-md-8 col-sm-12 col-xl-6">
+                        <p class="fs-2 fw-semibold">Location</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-100" pInputText
+                            placeholder="Islamabad" formControlName="location" />
+                    </div>
+                    <div class=" col-12 col-lg-5 pr-3 col-md-12 col-sm-12 col-xl-6">
+                        <p class="fs-2 fw-semibold">Salary</p>
+                        <input type="number" class="fs-4 p-component p-element p-inputtext shadow-3 w-100" pInputText
+                            placeholder="Rs. 100000" formControlName="salary" />
+                    </div>
+                </div>
+                <div class="grid m-0">
+                    <div class=" col-12 col-lg-5 pr-3 col-md-12 col-sm-12 col-xl-6">
+                        <p class="fs-2 fw-semibold">Deadline</p>
+                        <input type="date" class="fs-4 p-component p-element p-inputtext shadow-3 w-100" pInputText
+                            placeholder="Islamabad" formControlName="deadline" />
+                    </div>
+                    <div class=" col-12 col-lg-5 col-md-12 col-sm-12 col-xl-6">
+                        <p class="fs-2 fw-semibold">Job Type</p>
+                        <p-dropdown class="fs-4 p-0 p-dropdown-content" placeholder="On site" [options]="jobMode"
+                            optionLabel="name" (onChange)="handleJobTypeChange($event)">
+                        </p-dropdown>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="fs-2 fw-semibold mt-4">Job Description</p>
+                    <textarea rows="5" placeholder="JAVA Developer" cols="30" class="w-100 shadow-3 fs-4" pInputTextarea
+                        formControlName="description"></textarea>
+                </div>
+                <div>
+                    <p class="fs-2 fw-semibold mt-4">Job Requirements</p>
+                    <textarea rows="5" placeholder="JAVA Developer" cols="30" class="w-100 shadow-3 fs-4" pInputTextarea
+                        formControlName="requirements"></textarea>
+                </div>
+                <div class="mt-4 text-center">
+                    <p-button class="btn-pink" type="submit">Post</p-button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

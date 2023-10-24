@@ -1,0 +1,126 @@
+<div class="tabView-body">
+    <p-tabView class="custom-tabview" [(activeIndex)]="activeIndex">
+        <p-tabPanel class="tab-view-back" headerStyleClass="mx-0">
+            <ng-template pTemplate="header">
+                <p-button label="Shortlist" (click)="handlePanelChange(0)"
+                    styleClass="{{activeIndex!=0 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of jobs" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-5 d-flex p-0">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img [src]="!item.candidateId.profilePic[0]?'../../assets/pictures/demo.jpg':'https://careerapis.tech-east.com.pk/api/getFile'+item.candidateId.profilePic[0]" alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 fw-semibold m-0">{{item?.jobId?.title}}</p>
+                                <p class="fs-4 fw-light">By {{item?.jobId?.postedBy?.fName + " " + item?.jobId?.postedBy?.lName}}</p>
+                            </div>
+                        </div>
+                        <div class="col-4 align fs-2">
+                            <i class="fs-3 pr-2 fw-bold pi pi-info-circle"></i>
+                            <u class="fs-4">View Detail</u>
+                        </div>
+                        <div class="col-3">
+                            <p class="m-0">Interview Date 12.02.2023</p>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel headerStyleClass="mx-0">
+            <ng-template pTemplate="header">
+                <p-button label="Final Shortlist" (click)="handlePanelChange(1)"
+                    styleClass="{{activeIndex!=1 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of jobs" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-5 d-flex p-0">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img [src]="!item.candidateId.profilePic[0]?'../../assets/pictures/demo.jpg':'https://careerapis.tech-east.com.pk/api/getFile'+item.candidateId.profilePic[0]" alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 fw-semibold m-0">{{item?.jobId?.title}}</p>
+                                <p class="fs-4 fw-light">By {{item?.jobId?.postedBy?.fName + " " + item?.jobId?.postedBy?.lName}}</p>
+                            </div>
+                        </div>
+                        <div class="col-4 align fs-2">
+                            <i class="fs-3 pr-2 fw-bold pi pi-info-circle"></i>
+                            <u class="fs-4">View Detail</u>
+                        </div>
+                        <div class="col-3">
+                            <p class="m-0">Pending Decision</p>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel headerStyleClass="mx-0">
+            <ng-template pTemplate="header">
+                <p-button label="Interview" (click)="handlePanelChange(2)"
+                    styleClass="{{activeIndex!=2 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of jobs" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-5 d-flex p-0">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img [src]="!item.candidateId.profilePic[0]?'../../assets/pictures/demo.jpg':'https://careerapis.tech-east.com.pk/api/getFile'+item.candidateId.profilePic[0]" alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 fw-semibold m-0">{{item?.jobId?.title}}</p>
+                                <p class="fs-4 fw-light">By {{item?.jobId?.postedBy?.fName + " " + item?.jobId?.postedBy?.lName}}</p>
+                            </div>
+                        </div>
+                        <div class="col-4 align fs-2">
+                            <i class="fs-3 pr-2 fw-bold pi pi-info-circle"></i>
+                            <u class="fs-4">View Detail</u>
+                        </div>
+                        <div class="col-3">
+                            <u class="text-red-500">Reason Message</u>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+
+        <p-tabPanel headerStyleClass="mx-0">
+            <ng-template pTemplate="header">
+                <p-button label="All Jobs" (click)="handlePanelChange(3)"
+                    styleClass="{{activeIndex!=3 ? 'bg-transparent border-none shadow-none text-dark p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl' : 'p-button-raised p-button-danger p-button-lg px-lg-4 px-md-3 px-sm-1 px-xxl-5 py-lg-3 py-xl-4 py-xxl-4 border-round-3xl'}}"></p-button>
+            </ng-template>
+            <div *ngFor="let item of jobs" class="p-0 m-3">
+                <p-card class="p-0">
+                    <div class="align-items-center grid p-0">
+                        <div class="col-5 d-flex p-0">
+                            <div class="p-0">
+                                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                                    <img [src]="!item.candidateId.profilePic[0]?'../../assets/pictures/demo.jpg':'https://careerapis.tech-east.com.pk/api/getFile'+item.candidateId.profilePic[0]" alt="">
+                                </p-avatar>
+                            </div>
+                            <div>
+                                <p class="fs-4 fw-semibold m-0">{{item?.jobId?.title}}</p>
+                                <p class="fs-4 fw-light">By {{item?.jobId?.postedBy?.fName + " " + item?.jobId?.postedBy?.lName}}</p>
+                            </div>
+                        </div>
+                        <div class="col-4 align fs-2">
+                            <i class="fs-3 pr-2 fw-bold pi pi-info-circle"></i>
+                            <u class="fs-4">View Detail</u>
+                        </div>
+                        <div class="col-3">
+                            <p-button class="btn-apply">Applied Jobs</p-button>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </p-tabPanel>
+        <h1 *ngIf="!jobs">No Jobs Regarding this filter</h1>
+    </p-tabView>
+</div>

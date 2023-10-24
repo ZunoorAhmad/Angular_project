@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="grid m-0 p-5 px-7 g-0 ">
+        <div class="col">
+            <h1 class="font-italic">SMART CAREER</h1>
+        </div>
+        <div class="col d-flex align-items-center justify-content-end">
+            <p class="fs-3">{{user.fName + " " + user.lName}}</p>
+            <div>
+                <p-avatar shape="circle" styleClass="mx-5" class="avatar-header">
+                    <img [src]="'https://careerapis.tech-east.com.pk/api/getFile'+user.profilePic[0]" alt=""></p-avatar>
+            </div>
+            <div>
+                <i class="pi pi-cog" style="font-size: 2rem"></i>
+            </div>
+        </div>
+    </div>
+</div>

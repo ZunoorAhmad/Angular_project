@@ -1,0 +1,84 @@
+<div>
+    <h1>
+        Search Candidates Here
+    </h1>
+    <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+        <div>
+            <div class="grid m-0">
+                <div class="col-12">
+                    <div>
+                        <p class="fs-3 fw-semibold my-3">Education</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-11" pInputText
+                            placeholder="Applicant Education" formControlName="applicant_education" /><br>
+                        <small class="ng-dirty ng-invalid text-red-600"
+                            *ngIf="formControl.applicant_education && formControl.applicant_education.invalid && formControl.applicant_education.touched">Education
+                            is
+                            required.</small>
+                    </div>
+                    <div>
+                        <p class="fs-3 fw-semibold my-3">Applicant Experience *(in years)</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-11" pInputText
+                            placeholder="Experience" formControlName="applicant_experience" /><br>
+                        <small class="ng-dirty ng-invalid text-red-600"
+                            *ngIf="formControl.applicant_experience && formControl.applicant_experience.invalid && formControl.applicant_experience.touched">Applicant
+                            Experience
+                            is
+                            required.</small>
+                    </div>
+                    <div>
+                        <p class="fs-3 fw-semibold my-3">Applicant Skills</p>
+                        <input type="text" class="fs-4 p-component p-element p-inputtext shadow-3 w-11" pInputText
+                            placeholder="JAVA,C++ ..." formControlName="applicant_skills" /><br>
+                        <small class="ng-dirty ng-invalid text-red-600"
+                            *ngIf="formControl.applicant_skills && formControl.applicant_skills.invalid && formControl.applicant_skills.touched">Applicant
+                            Skill
+                            is
+                            required.</small>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div>
+                        <p class="fs-3 fw-semibold my-3">Applicant Location</p>
+                        <p-dropdown class="fs-4 p-0 p-dropdown-content" formControlName="applicant_location"
+                            placeholder="Select applicant_location" [options]="cities">
+                        </p-dropdown><br>
+                        <small class="ng-dirty ng-invalid text-red-600"
+                            *ngIf="formControl.applicant_location && formControl.applicant_location.invalid && formControl.applicant_location.touched">Applicant
+                            Location
+                            is required.</small>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <p-button class="btn-post" type="submit">Post</p-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+    <p-table [value]="users" dataKey="name" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name">Name</th>
+                <th pSortableColumn="phone">Education</th>
+                <th pSortableColumn="address">Experience</th>
+                <th pSortableColumn="address">Skills</th>
+                <th pSortableColumn="address">Location</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-notification let-rowIndex="rowIndex" let-expanded="expanded">
+            <tr>
+                <td class="min-width">{{notification.name}}</td>
+                <td class="min-width">{{notification.education}}</td>
+                <td class="capitalize min-width">{{notification.work_experience}}</td>
+                <td class="capitalize min-width">{{notification.skills}}</td>
+                <td class="capitalize min-width">{{notification.location}}</td>
+            </tr>
+        </ng-template>
+        <ng-template *ngIf="users.length<1">No Candidates Yet</ng-template>
+    </p-table>
+
+
+            
+</div>

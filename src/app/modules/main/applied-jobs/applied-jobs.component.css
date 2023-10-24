@@ -1,0 +1,82 @@
+.avatar-header ::ng-deep .p-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.btn-apply ::ng-deep .p-button {
+    background: #FD7265;
+    border: 1px solid #FD7265;
+    width: 80%;
+    font-size: 25px;
+    border-radius: 30px;
+    justify-content: center;
+}
+
+/* Base styles for larger screens */
+.job-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+}
+
+.card-content {
+    width: 100%;
+}
+
+.card-row {
+    width: 100%;
+}
+
+.job-card .align-items-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .job-card .col-5 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.job-card .col-4 {
+    width: 40%;
+}
+
+.job-card .col-3 {
+    width: 30%;
+    text-align: right;
+} */
+
+/* Media query for smaller screens (e.g., tablets) */
+@media screen and (max-width: 768px) {
+    .job-card .col-5 {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .job-card .col-4,
+    .job-card .col-3 {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+/* Media query for even smaller screens (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+    .job-card .align-items-center {
+        flex-direction: column;
+    }
+
+    .job-card .col-5,
+    .job-card .col-4,
+    .job-card .col-3 {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}

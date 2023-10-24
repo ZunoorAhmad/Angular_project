@@ -1,0 +1,26 @@
+<!-- <div class="col-3 pl-4" style="max-width: 20%;"> -->
+    <!-- <div class="card pt-5 card_div">
+        <div class="align-self-center my-2 w-10" *ngFor="let item of list;let i=index">
+            <p-button class="btn-sideMenu" [routerLink]="item.route" id="{{i}}" (click)="isActive=i" (click)="working(i)" [class.active]="isActive==i"><i
+                    class="{{item.icon}} fs-5 p-2"></i>{{item.title}}       
+                    </p-button>
+        </div>
+        <div class="align-self-center my-2 btn-logout position-absolute w-10">
+            <p-button class="fs-5 btn-pink" routerLink="/auth/login"><i class="fs-4 p-2"></i>Logout</p-button>
+        </div>
+    </div> -->
+<!-- </div> -->
+<div class="card pt-5 card_div">
+    <div class="align-self-center my-2 w-10" *ngFor="let item of list;let i=index">
+        <p-button class="btn-sideMenu" [routerLink]="item.route" id="{{i}}" (click)="isActive=i" (click)="working(i)" [class.active]="isActive==i">
+            <i class="{{item.icon}} fs-5 p-2"></i>
+            <span class=" d-md-inline">{{item.title}}</span> <!-- Hide text on smaller screens -->
+        </p-button>
+    </div>
+    <div class="align-self-center my-2 btn-logout position-absolute w-10">
+        <p-button class="fs-5 btn-pink" routerLink="/auth/login">
+            <i class="fs-4 p-2"></i>
+            <span class="d-md-inline">Logout</span> <!-- Hide text on smaller screens -->
+        </p-button>
+    </div>
+</div>

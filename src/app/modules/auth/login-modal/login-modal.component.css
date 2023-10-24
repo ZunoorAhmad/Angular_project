@@ -1,0 +1,116 @@
+.img-bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../../../assets/pictures/login-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-gradient-color {
+    height: 100vh;
+    background-image: linear-gradient(to left, #FD7265, #3F41E3);
+}
+
+.img-bg h1 {
+    color: white;
+    font-family: monospace;
+    padding: 10px;
+}
+
+.common-btn ::ng-deep .p-button {
+    width: 320px;
+    height: 86px;
+    background: #FD7265;
+    border: 1px solid #FD7265;
+    border-radius: 53px;
+    font-size: 26px;
+}
+
+.card-body ::ng-deep .p-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 34px;
+    width: 86%;
+    /* height: 734px; */
+    padding: 20px;
+}
+
+.btn-job ::ng-deep .p-button {
+    width: 60%;
+    height: 86px;
+    font-size: 26px;
+    border: 5px solid #FFFFFF;
+    border-radius: 53px;
+    background: none;
+}
+
+.btn-login ::ng-deep .p-button {
+    width: 140px;
+    background: #FD7265 0% 0% no-repeat padding-box;
+    border-radius: 39px;
+    font-size: 26px;
+    border: 1px solid #FD7265;
+}
+
+.btn-login1 ::ng-deep .p-button {
+    width: 10rem;
+    background: #FD7265 0% 0% no-repeat padding-box;
+    border-radius: 39px;
+    font-size: 26px;
+    border: 1px solid #FD7265;
+}
+
+.img-fluid {
+    width: 100% !important;
+}
+
+.div-btn {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:1500px) {
+    .common-btn ::ng-deep .p-button {
+        width: 250px;
+        height: 86px;
+    }
+
+    .card-body ::ng-deep .p-card {
+        width: 100%;
+        height: 450px;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 1600px) {
+    .card-body ::ng-deep .p-card {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media (min-width: 1601px) and (max-width: 1800px) {
+    .card-body ::ng-deep .p-card {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+.text-center {
+    font-family: "Arial", sans-serif;
+    font-size: 36px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.img-gradient-color {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .fullscreen-container {
+        min-height: calc(100vh);
+    }
+}

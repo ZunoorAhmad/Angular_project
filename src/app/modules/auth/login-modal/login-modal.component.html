@@ -1,0 +1,84 @@
+<!-- <div class="img-gradient-color">
+    <div class="img-bg">
+        <h1>SMART-CAREER</h1>
+        <div class="grid m-0">
+            <div
+                class="col-sm-12 col-md-12 col-lg-6 col-xl-7 col-xxl-7   order-xxl-first  order-xl-first  order-lg-first order-md-last order-sm-last order-last">
+                <img class="d-sm-none d-xl-block w-11" src="../../../../assets/pictures/img-home.png" alt="">
+                <div class="grid m-0">
+                    <div class="col-5 flex justify-content-end">
+                        <p-button p-button label="Register" routerLink="/auth/register" styleClass="p-button-rounded"
+                            class="common-btn"></p-button>
+                    </div>
+                    <div class="col-7">
+                        <p-button label="Post a Job" styleClass="p-button-rounded" class="btn-job"></p-button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="col-sm-12 col-md-12 col-lg-6 col-xl-5 col-xxl-5 flex justify-content-center   order-xxl-last order-xl-last order-lg-last order-md-first order-sm-first order-first">
+                <form class="w-10" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <p-card class="card-body">
+                        <p class="text-white mt-4 fs-3">Email</p>
+                        <input type="text" placeholder="Abc@gmail.com" class="w-12 border-round-2xl" pInputText formControlName="email" />
+                        <p class="text-white mt-4 fs-3">Password</p>
+                        <input type="text" class="w-12 border-round-2xl" pInputText placeholder="********" formControlName="password" />
+                        <p class="text-white mt-4 fs-5 mb-6 float-end">Forgot Password?</p>
+                        <p-button label="Login" class="btn-login mt-6" type="submit"
+                            styleClass="p-button-rounded"></p-button>
+                    </p-card>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="fluid-container">
+    <div class="row img-gradient-color text-center h-100 align-items-center">
+        <div class="col p-0 m-0 ">
+            <div class="img-bg">
+                <h1 class="text-center m-auto"
+                    style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    SMART-CAREER</h1>
+                <div class="row mt-sm-4 p-sm-5 justify-content-center align-items-center">
+                    <div class="col-lg-6 col-md-11 col-sm-11 order-last text-center">
+                        <img class="img-fluid d-none d-lg-block" src="../../../../assets/pictures/img-home.png" alt="">
+                        <div class="row mt-4">
+                            <div class="align-items-center">
+                                <p-button p-button class="btn-login" label="Register" routerLink="/auth/register"
+                                    styleClass="p-button-rounded common-btn"></p-button>
+                            </div>
+                            <!-- <div class="col-6">
+                            <p-button label="Post a Job" styleClass="p-button-rounded btn-job"></p-button>
+                        </div> -->
+                        </div>
+                    </div>
+                    <div class=" col-lg-5 col-md-12 col-sm-12 order-md-first order-sm-second"
+                        style="position: relative;">
+                        <form class="w-100" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <p-card class="card-body ">
+                                <div class="text-left ">
+                                    <span class="text-white mt-4 fs-5">Email</span>
+                                </div>
+                                <div class="text-left">
+                                    <input type="text" placeholder="Abc@gmail.com" class="form-control border-round-2xl"
+                                        pInputText formControlName="email" />
+                                    <p class="text-white mt-4 fs-5">Password</p>
+                                </div>
+                                <input type="password" class="form-control border-round-2xl" pInputText
+                                    placeholder="********" formControlName="password" />
+                                    <!-- <div>
+                                        <p class="text-white mt-4 fs-5 mb-4 float-end">Forgot Password?</p>
+                                    </div> -->
+                                <div>
+                                    <p-button label="Login" class="btn-login1 mt-7" type="submit"
+                                        styleClass="p-button-rounded mt-4"></p-button>
+                                </div>
+                            </p-card>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="shadow-6">
+  <p-card styleClass="p-7">
+    <div>
+      <p class="fs-4 fw-semibold my-3">Applicant First Name</p>
+      <input type="text" [value]="user?.fName" class="fs-4 p-component p-element p-inputtext shadow-3 w-100"
+        pInputText />
+    </div>
+    <div>
+      <p class="fs-4 fw-semibold my-3">Applicant Last Name</p>
+      <input type="text" [value]="user?.lName" class="fs-4 p-component p-element p-inputtext shadow-3 w-100"
+        pInputText />
+    </div>
+    <div>
+      <p class="fs-4 fw-semibold my-3">Applicant Email</p>
+      <input type="text" [value]="user?.email" class="fs-4 p-component p-element p-inputtext shadow-3 w-100"
+        pInputText />
+    </div>
+    <div>
+      <p class="fs-4 fw-semibold my-3">Applicant Phone Number</p>
+      <input type="text" [value]="user?.phone" class="fs-4 p-component p-element p-inputtext shadow-3 w-100 mb-3"
+        pInputText />
+    </div>
+    <div>
+      <div class="grid m-0">
+        <div class="col-12">
+          <p-button styleClass="btn-group-vertical fs-3 w-100" (click)="goToLinkedIn()">LinkedIn Profile</p-button>
+        </div>
+        <div class="col-12">
+          <p-button (click)="handleDownloadFile()" styleClass="btn-group-vertical fs-3 w-100">Download CV</p-button>
+        </div>
+      </div>
+      <div class="grid mt-6">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6">
+          <p-button styleClass="btn-group-vertical fs-3 w-100 p-button-danger my-2">Decline</p-button>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6 pl-2">
+          <p-button (click)="handlePressScheduleInterview()"
+            styleClass="btn-group-vertical fs-3 w-100 p-button-success my-2">Set up
+            Interview</p-button>
+        </div>
+      </div>
+      <div class="grid mt-6">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6 pr-2">
+          <p-button (click)="handlePressFinalShortList()"
+            styleClass="btn-group-vertical fs-3 w-100 p-button-success my-2">Final ShortList
+          </p-button>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6">
+          <p-button (click)="handlePressShortList()"
+            styleClass="btn-group-vertical fs-3 w-100 p-button-danger my-2">ShortList</p-button>
+        </div>
+      </div>
+    </div>
+  </p-card>
+</div>

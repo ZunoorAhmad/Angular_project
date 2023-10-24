@@ -1,0 +1,28 @@
+.btn-custom-view ::ng-deep .p-button {
+    /* background: black !important; */
+    color: yellow;
+}
+
+.tabView-body ::ng-deep .p-tabview .p-tabview-nav {
+    background-color: #F9F9F9;
+    border-radius: 40px;
+    margin: 0 50px;
+}
+
+.tabView-body ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    background-color: transparent;
+}
+
+.avatar-header ::ng-deep .p-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.btn-apply ::ng-deep .p-button {
+    background: #FD7265;
+    border: 1px solid #FD7265;
+    width: 80%;
+    font-size: 25px;
+    border-radius: 30px;
+    justify-content: center;
+}

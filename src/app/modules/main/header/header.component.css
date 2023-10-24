@@ -1,0 +1,4 @@
+.avatar-header ::ng-deep .p-avatar {
+    width: 80px;
+    height: 80px;
+}

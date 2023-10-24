@@ -1,0 +1,55 @@
+.applicant-container {
+    width: 100%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px 0;
+  }
+  
+  .form-button.danger {
+    background-color: #d9534f; /* Red for decline button */
+    color: #fff;
+  }
+  
+  .form-button.success {
+    background-color: #5bc0de; /* Blue for set up interview button */
+    color: #fff;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .applicant-container {
+      max-width: 100%; /* Full width on small screens */
+    }
+  }
+  
